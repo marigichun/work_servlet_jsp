@@ -1,16 +1,15 @@
-<%@ page contentType= "text/html; charset=utf-8" %>
-<!DOCTYPE html">
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true" %>
+<!DOCTYPE html>
 <html>
-<head><title></title></head>
+<head><title>main</title></head>
 <body>
-main.jsp에서 생성한 내용이다 멍
 
-<%
- 	String text ="hello";
-%>
-<jsp:include page= "sub.jsp" flush="false" />
+main.jsp에서 생성한 내용.
 
-include 이후의 내용이다 멍
+<jsp:include page="sub.jsp" flush="false" />
+
+include 이후의 내용.
 
 </body>
 </html>

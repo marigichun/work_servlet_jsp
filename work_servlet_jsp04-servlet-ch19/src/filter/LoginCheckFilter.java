@@ -28,9 +28,10 @@ public class LoginCheckFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {
+		System.out.println("로그인 체크 필터 들어감");
 		
 		// HttpServletRequest의 기능을 사용하기 위해 다운캐스팅 (getSession 메소드)
-		HttpServletRequest httpReq = (HttpServletRequest) req;//37번줄을 실행하기 위해 다운 캐스팅
+		HttpServletRequest httpReq = (HttpServletRequest) req;
 		
 		// getSession(false): 현재 세션이 존재하면 세션 객체를 리턴, 아니면 null값 리턴
 		// getSession(true): 현재 세션이 존재하면 세션 객체를 리턴, 아니면 새로 세션을 생성해서 리턴 
@@ -50,11 +51,11 @@ public class LoginCheckFilter implements Filter {
 		// 로그인 된 상태라면
 		if (login) {
 			// doFilter 호출 전은 클라이언트로부터 요청이 들어오는 방향
-			chain.doFilter(req, resp);     			//보이는 창으로 바로 이동(본래 url접속창으로)
+			chain.doFilter(req, resp);
 			// doFilter 호출 후는 서버로부터 클라이언트로 응답이 나가는 방향
 			System.out.println("필터 처리 끝난 후 서버의 응답이 빠져나감");
 		}
-		else {														//아니면 로그인창으로 
+		else {
 			RequestDispatcher dispatcher = req.getRequestDispatcher("/login-form.do");
 			dispatcher.forward(req, resp);
 		}
