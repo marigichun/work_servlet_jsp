@@ -7,8 +7,8 @@
 <head><title>EL Object</title></head>
 <body>
 	<!--
-		표현 언어 EL(Expression Language ${ requestScope.name })
-		
+		표현 언어 EL(Expression Language)
+		${ requestScope.name }
 	-->
 	요청 URI: ${ pageContext.request.requestURI }<br>
 	request의 name 속성: ${ requestScope.name }<br>
