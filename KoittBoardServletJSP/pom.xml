@@ -25,21 +25,21 @@
     </plugins>
   </build>
   <dependencies>
+  	<!-- taglib 사용을 위해 설정 -->
   	<dependency>
-  		<!-- taglib 사용을 위해 설정 -->
   		<groupId>org.apache.taglibs</groupId>
   		<artifactId>taglibs-standard-impl</artifactId>
   		<version>1.2.5</version>
-  	
-  	<!-- jstl -->	
   	</dependency>
+  	
+  	<!-- JSTL -->
   	<dependency>
   		<groupId>javax.servlet.jsp.jstl</groupId>
   		<artifactId>jstl-api</artifactId>
   		<version>1.2</version>
   	</dependency>
   	
-  	<!-- maysql jdbc 드라이버 -->
+  	<!-- MySQL JDBC 드라이버 -->
   	<dependency>
   		<groupId>mysql</groupId>
   		<artifactId>mysql-connector-java</artifactId>
