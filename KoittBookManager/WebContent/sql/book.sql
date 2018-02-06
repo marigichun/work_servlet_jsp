@@ -7,7 +7,6 @@ CREATE TABLE book(
 	description	VARCHAR(255) NULL 
 );
 
-#DML(Data Manipulation Language)
 INSERT INTO book (title, author, publisher, price, description)
 	VALUES ('책제목-1', '작가-1', '출판사-1', 30000, '설명-1');
 	
@@ -17,5 +16,3 @@ INSERT INTO book (title, author, publisher, price, description)
 INSERT INTO book (title, author, publisher, price, description)
 	VALUES ('책제목-3', '작가-3', '출판사-3', 30000, '설명-3');
 
-#DQL(Data Query Language)
-SELECT * FROM book;
